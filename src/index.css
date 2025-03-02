@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Yazdırma stilleri */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+  
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Pedigree sayfası için özel yazdırma stilleri */
+  .print-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .print-blue-bg {
+    background-color: #e6f0ff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .print-purple-bg {
+    background-color: #f0e6ff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Tüm bölümleri yazdırmada göster */
+  .hidden.print-section {
+    display: block !important;
+  }
+  
+  /* Yazdırma için kompakt görünüm */
+  .print-content {
+    font-size: 9pt !important;
+    line-height: 1.3 !important;
+  }
+  
+  .print-content h3 {
+    font-size: 12pt !important;
+    margin-bottom: 3mm !important;
+  }
+  
+  .print-content h4 {
+    font-size: 10pt !important;
+    margin-bottom: 2mm !important;
+  }
+  
+  .print-content p {
+    margin-bottom: 1mm !important;
+  }
+  
+  /* Pedigree sertifikası için özel yazdırma stilleri */
+  .print-header {
+    background-color: #2563eb !important;
+    color: white !important;
+    padding: 15mm 5mm !important;
+    text-align: center !important;
+    margin-bottom: 5mm !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .print-certificate-title {
+    font-size: 24pt !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+  }
+  
+  .print-footer {
+    display: block !important;
+    text-align: center !important;
+    font-size: 8pt !important;
+    color: #6b7280 !important;
+    margin-top: 10mm !important;
+    padding-top: 3mm !important;
+    border-top: 1px solid #e5e7eb !important;
+  }
+  
+  .print-pedigree-tree {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 3mm !important;
+  }
+  
+  .print-pedigree-box {
+    border: 1px solid #d1d5db !important;
+    padding: 3mm !important;
+    margin-bottom: 2mm !important;
+  }
+  
+  .print-pedigree-parent {
+    font-weight: bold !important;
+    font-size: 10pt !important;
+    margin-bottom: 1mm !important;
+  }
+  
+  .print-pedigree-grandparent {
+    font-weight: bold !important;
+    font-size: 8pt !important;
+    margin-bottom: 1mm !important;
+  }
+  
+  .print-pedigree-info {
+    font-size: 7pt !important;
+  }
+  
+  /* Progress bar colors for printing */
+  .bg-green-500, .bg-green-600 {
+    background-color: #10b981 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .bg-blue-500, .bg-blue-600 {
+    background-color: #3b82f6 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .bg-yellow-500, .bg-yellow-600 {
+    background-color: #f59e0b !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .bg-red-500, .bg-red-600 {
+    background-color: #ef4444 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .text-green-600 {
+    color: #10b981 !important;
+  }
+  
+  .text-blue-600 {
+    color: #3b82f6 !important;
+  }
+  
+  .text-yellow-600 {
+    color: #f59e0b !important;
+  }
+  
+  .text-red-600 {
+    color: #ef4444 !important;
+  }
+  
+  /* PDF oluşturma sırasında performans ve belgeler bölümlerini gizle */
+  .performance-section, .documents-section {
+    display: none !important;
+  }
+}
+
+/* PDF oluşturma için özel stiller */
+.print-mode {
+  background-color: white !important;
+  padding: 20px !important;
+  max-width: 210mm !important;
+  margin: 0 auto !important;
+}
+
+.print-mode .print-header {
+  background-color: #2563eb !important;
+  color: white !important;
+  padding: 15mm 5mm !important;
+  text-align: center !important;
+  margin-bottom: 5mm !important;
+}
+
+.print .print-mode .print-blue-bg {
+  background-color: #e6f0ff !important;
+}
+
+.print-mode .print-purple-bg {
+  background-color: #f0e6ff !important;
+}
+
+.print-mode .print-footer {
+  display: block !important;
+  text-align: center !important;
+  font-size: 8pt !important;
+  color: #6b7280 !important;
+  margin-top: 10mm !important;
+  padding-top: 3mm !important;
+  border-top: 1px solid #e5e7eb !important;
+}
+
+/* PDF oluşturma sırasında performans ve belgeler bölümlerini gizle */
+.print-mode .performance-section,
+.print-mode .documents-section {
+  display: none !important;
+}
